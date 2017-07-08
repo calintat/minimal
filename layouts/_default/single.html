@@ -1,0 +1,22 @@
+{{ partial "header" . }}
+
+<main>
+
+    {{ partial "list-item" . }}
+
+    <br> <div class="text-justify">{{ .Content }}</div>
+
+    <!-- related posts with the same tags -->
+    {{ $related := first (.Site.Params.related | default 3) (where (where .Site.Pages.ByDate.Reverse ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
+
+    {{ if $related }}
+
+        <h4 class="page-header">Related Posts</h4>
+
+        {{ range $related }} {{ partial "list-item" . }} {{ end }}
+
+    {{ end }}
+
+</main>
+
+{{ partial "footer.html" . }}
