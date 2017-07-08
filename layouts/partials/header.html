@@ -33,17 +33,21 @@
 
                 <div class="collapse navbar-collapse">
 
-                    <ul class="nav navbar-nav">
-                        {{ range sort .Site.Menus.main }}
-                            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-                        {{ end }}
-                    </ul>
+                    {{ if .Site.Menus.main }}
+                        <ul class="nav navbar-nav">
+                            {{ range sort .Site.Menus.main }}
+                                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                            {{ end }}
+                        </ul>
+                    {{ end }}
 
-                    <ul class="nav navbar-nav navbar-right">
-                        {{ range sort .Site.Menus.icon }}
-                            <li class="navbar-icon"><a href="{{ .URL }}"><i class="fa fa-{{ .Name }}"></i></a></li>
-                        {{ end }}
-                    </ul>
+                    {{ if .Site.Menus.icon }}
+                        <ul class="nav navbar-nav navbar-right">
+                            {{ range sort .Site.Menus.icon }}
+                                <li class="navbar-icon"><a href="{{ .URL }}"><i class="fa fa-{{ .Name }}"></i></a></li>
+                            {{ end }}
+                        </ul>
+                    {{ end }}
 
                 </div>
 
