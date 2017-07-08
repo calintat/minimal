@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+    <head>
+
+        <title>{{ .Title }}</title>
+
+        {{ partial "css" . }} {{ partial "javascript" . }}
+
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">{{ .Title }}</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    <ul class="nav navbar-nav">
+                        {{ range sort .Site.Menus.main }}
+                            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                        {{ end }}
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        {{ range sort .Site.Menus.icon }}
+                            <li class="navbar-icon"><a href="{{ .URL }}"><i class="fa fa-{{ .Name }}"></i></a></li>
+                        {{ end }}
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
