@@ -5,7 +5,7 @@
 
         <title>{{ .Title }}</title>
 
-        {{ partial "css" . }} {{ partial "js" . }}
+        {{ partial "css" . }} {{ partial "js" . }} {{ .Hugo.Generator }}
 
         <meta charset="utf-8">
 
