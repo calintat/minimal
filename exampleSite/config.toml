@@ -50,7 +50,7 @@ theme = "minimal"
     weight = 3
 
 [[menu.icon]]
-    url = "https://linkedin.com/in/username/"
+    url = "https://www.linkedin.com/in/username/"
     name = "linkedin"
     weight = 4
 
