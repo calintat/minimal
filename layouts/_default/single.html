@@ -7,7 +7,7 @@
     <br> <div class="text-justify">{{ .Content }}</div>
 
     <!-- related posts with the same tags -->
-    {{ $related := first (.Site.Params.related | default 3) (where (where .Site.Pages.ByDate.Reverse ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
+    {{ $related := first 3 (where (where (where .Site.Pages.ByDate.Reverse ".Type" "==" "post") ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
 
     {{ if $related }}
 
