@@ -53,7 +53,7 @@ The theme uses [Google Fonts](https://fonts.google.com) to load its font. To cha
 
 ```toml
 [params]
-    font = "Quicksand" # should match the name on Google Fonts!
+    font = "Raleway" # should match the name on Google Fonts!
 ```
 
 ### Syntax highlighting
