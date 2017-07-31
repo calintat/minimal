@@ -26,7 +26,7 @@ To get started, copy the `config.toml` file inside `exampleSite` to the root of 
 
 Now edit this file and add your own information. Note that some fields can be ommited.
 
-I recommed you use the theme's archetypes so now delete your site's `archetypes/default.md`.
+I recommend you use the theme's archetypes so now delete your site's `archetypes/default.md`.
 
 ## Features
 
