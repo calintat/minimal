@@ -1,6 +1,7 @@
 # Minimal
 
-Personal blog theme powered by [Hugo](https://gohugo.io)
+Personal blog theme powered by [Hugo](https://gohugo.io).
+A live demo is available [here](https://themes.gohugo.io/theme/minimal/).
 
 ## Installation
 
@@ -8,13 +9,17 @@ You can install the theme either as a clone or submodule.
 
 I recommend the latter. From the root of your Hugo site, type the following:
 
-    $ git submodule add https://github.com/calintat/minimal.git themes/minimal
-    $ git submodule init
-    $ git submodule update
+```
+$ git submodule add https://github.com/calintat/minimal.git themes/minimal
+$ git submodule init
+$ git submodule update
+```
 
 Now you can get updates to Minimal in the future by updating the submodule:
 
-    $ git submodule update --remote themes/minimal
+```
+$ git submodule update --remote themes/minimal
+```
 
 ## Configuration
 
@@ -22,7 +27,9 @@ After installation, take a look at the `exampleSite` folder inside `themes/minim
 
 To get started, copy the `config.toml` file inside `exampleSite` to the root of your Hugo site:
 
-    $ cp themes/minimal/exampleSite/config.toml .
+```
+$ cp themes/minimal/exampleSite/config.toml .
+```
 
 Now edit this file and add your own information. Note that some fields can be ommited.
 
