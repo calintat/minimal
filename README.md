@@ -28,6 +28,10 @@ Now edit this file and add your own information. Note that some fields can be om
 
 I recommend you use the theme's archetypes so now delete your site's `archetypes/default.md`.
 
+### Projects
+
+
+
 ## Features
 
 You can tweak the look of the theme to suit your needs in a number of ways:
