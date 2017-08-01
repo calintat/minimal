@@ -19,4 +19,8 @@
 
 </main>
 
+{{ if .Site.DisqusShortname }}
+  {{ template "_internal/disqus.html" . }}
+{{ end }}
+
 {{ partial "footer.html" . }}
