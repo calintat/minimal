@@ -19,7 +19,7 @@
 
 </main>
 
-{{ if and .Site.DisqusShortname (not .Params.disable_comments)}}
+{{ if and .Site.DisqusShortname (not .Params.disableComments) }}
   {{ template "_internal/disqus.html" . }}
 {{ end }}
 
