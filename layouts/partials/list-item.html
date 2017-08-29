@@ -2,6 +2,7 @@
 
     {{ $.Scratch.Set "link" .RelPermalink }}
     {{ with .Params.repo }} {{ printf "https://github.com/%s/%s/" $.Site.Params.githubUsername . | $.Scratch.Set "link" }} {{ end }}
+    {{ with .Params.link }} {{ $.Scratch.Set "link" . }} {{ end }}
 
     {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") | $.Scratch.Set "subtitle" }}
     {{ with .Description }} {{ $.Scratch.Set "subtitle" . }} {{ end }}
