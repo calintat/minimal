@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Minimal"
 theme = "minimal"
 disqusShortname = "username" # delete this to disable disqus comments
+googleAnalytics = ""
 
 [params]
     author = "Calin Tataru"
