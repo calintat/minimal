@@ -2,6 +2,7 @@ baseURL = "http://example.com/"
 languageCode = "en-us"
 title = "Minimal"
 theme = "minimal"
+disqusShortname = "username" # delete this to disable disqus comments
 
 [params]
     author = "Calin Tataru"
