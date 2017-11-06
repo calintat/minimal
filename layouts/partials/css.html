@@ -13,7 +13,7 @@
 </style>
 
 <!-- main -->
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css">
 
 <!-- custom -->
 {{ range .Site.Params.css }} <link rel="stylesheet" href="{{ . }}"> {{ end }}
