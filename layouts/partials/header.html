@@ -34,7 +34,7 @@
     </script>
     {{ end }}
 
-    <body>
+    <body id = "bigbody">
         {{ partial "body-open" . }}
         <nav class="navbar navbar-default navbar-fixed-top">
 
@@ -67,6 +67,8 @@
                             {{ range sort .Site.Menus.icon }}
                                 <li class="navbar-icon"><a href="{{ .URL }}"><i class="fa fa-{{ .Name }}"></i></a></li>
                             {{ end }}
+                            
+                            {{ partial "toggle"}}
                         </ul>
                     {{ end }}
 

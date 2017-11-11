@@ -1,21 +1,26 @@
-baseURL = "http://example.com/"
+baseURL = "/"
 languageCode = "en-us"
-title = "Minimal"
+title = "NateDay-ta"
+description = "R focused data docs"
 theme = "minimal"
-disqusShortname = "username" # delete this to disable disqus comments
+disqusShortname = ""#"nateday-me" # delete this to disable disqus comments
 googleAnalytics = ""
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+[permalinks]
+    post = "/:year/:month/:day/:slug/"
 
 [params]
-    author = "Calin Tataru"
-    description = "Personal blog theme powered by Hugo"
-    githubUsername = "#"
-    accent = "red"
+    author = "Nate Day"
+    description = "R focused data docs"
+    githubUsername = "NathanCDay"
+    accent = "darkblue"
     showBorder = true
-    backgroundColor = "white"
+    backgroundColor = "#f5f5f5"
     font = "Raleway" # should match the name on Google Fonts!
     highlight = true
-    highlightStyle = "solarized-dark"
-    highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift"]
+    highlightStyle = "tomorrow-night-blue"
+    highlightLanguages = ["R"]
 
 [[menu.main]]
     url = "/"
@@ -31,32 +36,37 @@ googleAnalytics = ""
     url = "/project/"
     name = "Projects"
     weight = 3
+    
+[[menu.main]]
+    url = "/tags/"
+    name = "Tags"
+    weight = 4
 
 # Social icons to be shown on the right-hand side of the navigation bar
 # The "name" field should match the name of the icon to be used
 # The list of available icons can be found at http://fontawesome.io/icons/
 
 [[menu.icon]]
-    url = "mailto:me@example.com"
+    url = "mailto:nathancday@gmail.com"
     name = "envelope-o"
     weight = 1
 
 [[menu.icon]]
-    url = "https://github.com/username/"
+    url = "https://github.com/NathanCDay"
     name = "github"
     weight = 2
 
 [[menu.icon]]
-    url = "https://twitter.com/username/"
+    url = "https://twitter.com/offallday/"
     name = "twitter"
     weight = 3
 
 [[menu.icon]]
-    url = "https://www.linkedin.com/in/username/"
+    url = "https://www.linkedin.com/in/nathan-day-59b48435/"
     name = "linkedin"
     weight = 4
 
 [[menu.icon]]
-    url = "https://www.stackoverflow.com/username/"
+    url = "https://www.stackoverflow.com/users/5878751/nate"
     name = "stack-overflow"
     weight = 5
