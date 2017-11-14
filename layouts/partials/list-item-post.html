@@ -21,7 +21,6 @@
     <h4><a href="{{ .Scratch.Get "link" }}">{{ .Title }}</a></h4>
     <h5>{{ $.Scratch.Get "pub_date" }} - {{ $.Scratch.Get "read_time" }} minutes</h5>
     <h5>{{ $.Scratch.Get "subtitle" }}</h5>
-
     {{ range.Params.categories }}
         <a href="{{"/categories/"|relLangURL }}{{.|urlize}}">
         <kbd class="item-cat"> {{ . }} </kbd>

@@ -1,7 +1,7 @@
-# Minimal
+# Minimal2
 
 Personal blog theme powered by [Hugo](https://gohugo.io).
-A live demo is available [here](https://themes.gohugo.io/theme/minimal/).
+A live demo is available [here](https://themungler.com).
 
 ## Installation
 

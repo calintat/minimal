@@ -1,16 +1,16 @@
 {{ partial "header" . }}
 
 <main>
-
     <h2>{{ .Title }}</h2>
 
-    {{ range (.Paginator 5).Pages }} {{ partial "list-item" . }}
-        {{ if eq "Posts" $.Title }}
-            {{ .ReadingTime}} minutes
+    {{ range (.Paginator 10).Pages }}
+        {{ if eq "Projects" $.Title }}
+            {{ partial "list-item-project" . }}
+        {{else}}
+            {{partial "list-item-post.html" .}}
         {{end}}
+    {{end}}
     
-    {{ end }}
-
 </main>
 
 {{ partial "paginator" . }}
