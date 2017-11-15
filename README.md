@@ -1,7 +1,14 @@
 # Minimal2
 
-Personal blog theme powered by [Hugo](https://gohugo.io).
-A live demo is available [here](https://themungler.com).
+A personal blog theme powered by [Hugo](https://gohugo.io), built on top on the great [Minimal](https://github.com/calintat/minimal) theme. The notable additions include:
+
+- A night-mode toggle
+- A larger more defined footer
+- A tags/categories partial template
+- All tags are links too
+- Seperate list templates for posts and projects
+
+A live demo is available [here](https://natedayta.com).
 
 ## Installation
 
@@ -23,7 +30,7 @@ $ git submodule update --remote themes/minimal
 
 ## Configuration
 
-After installation, take a look at the `exampleSite` folder inside `themes/minimal`.
+After installation, take a look at the `exampleSite` folder inside `themes/minimal2`.
 
 To get started, copy the `config.toml` file inside `exampleSite` to the root of your Hugo site:
 
@@ -51,8 +58,9 @@ For best results, I recommend you use a dark accent colour with a light backgrou
 [params]
     accent = "red"
     showBorder = true
-    backgroundColor = "white"
+    backgroundColor = "#f5f5f5"
 ```
+You can use hex codes or color names ("red"), I reccomend using hex codes for more specific color assignments.
 
 ### Fonts
 
@@ -81,5 +89,5 @@ Please note the style and languages should be written in hyphen-separated lowerc
 [params]
     highlight = true
     highlightStyle = "solarized-dark"
-    highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift"]
+    highlightLanguages = ["R"]
 ```

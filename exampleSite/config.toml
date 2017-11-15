@@ -1,9 +1,9 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "NateDay-ta"
-description = "R focused data docs"
+title = "Min Night"
+description = "A personal blog"
 theme = "minimal"
-disqusShortname = ""#"nateday-me" # delete this to disable disqus comments
+disqusShortname = ""
 googleAnalytics = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files/", "_cache$"]
 
@@ -11,15 +11,15 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files/", "_cache$"]
     post = "/:year/:month/:day/:slug/"
 
 [params]
-    author = "Nate Day"
-    description = "R focused data docs"
-    githubUsername = "NathanCDay"
-    accent = "#006264"
+    author = ""
+    description = "A personal blog"
+    githubUsername = ""
+    accent = "maroon" # dark colors do best
     showBorder = true
     backgroundColor = "#f5f5f5"
     font = "Raleway" # should match the name on Google Fonts!
     highlight = true
-    highlightStyle = "atelier-seaside-light"
+    highlightStyle = "atelier-heath-light"
     highlightLanguages = ["R"]
 
 [[menu.main]]
