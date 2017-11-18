@@ -1,10 +1,10 @@
-name = "Minimal2"
+name = "MinNight"
 license = "MIT"
 licenselink = "https://github.com/nathancday/minimal2/blob/master/LICENSE.md"
-description = "Personal blog theme powered by Hugo"
-homepage = "http://github.com/nathancday/minimal2"
-tags = ["blog", "minimal", "personal", "responsive"]
-features = ["responsive", "night-theme"]
+description = "A night-mode theme for Hugo built on Minimal"
+homepage = "http://github.com/nathancday/min_night"
+tags = ["minimal", "dark", "light", "link_tags", "bootstrap"]
+features = ["responsive", "night-mode", "dark-mode"]
 min_version = "0.24.1"
 
 [author]

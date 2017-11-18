@@ -1,12 +1,11 @@
-# Minimal2
+# MinNight
 
-A personal blog theme powered by [Hugo](https://gohugo.io), built on top on the great [Minimal](https://github.com/calintat/minimal) theme. The notable additions include:
+A sleek toggleable night-mode theme for [Hugo](https://gohugo.io). Built on top on the great [Minimal](https://github.com/calintat/minimal) theme. With all of the great Minimal implementations, like custom accent colors, FontAwesome
 
-- A night-mode toggle
-- A larger more defined footer
-- A tags/categories partial template
-- All tags are links too
+- A night-mode toggle!!!
+- A tags/categories list page template from [Xmin](https://github.com/yihui/hugo-xmin)
 - Seperate list templates for posts and projects
+- All tags/categories are links 
 
 A live demo is available [here](https://natedayta.com).
 
@@ -17,7 +16,7 @@ You can install the theme either as a clone or submodule.
 I recommend the latter. From the root of your Hugo site, type the following:
 
 ```
-$ git submodule add https://github.com/calintat/minimal.git themes/minimal
+$ git submodule add https://github.com/nathancday/min_night themes/min_night
 $ git submodule init
 $ git submodule update
 ```
@@ -25,7 +24,14 @@ $ git submodule update
 Now you can get updates to Minimal in the future by updating the submodule:
 
 ```
-$ git submodule update --remote themes/minimal
+$ git submodule update --remote themes/min_night
+```
+
+I use this theme via the `R` pacakge `blogdown`, you can do the same with.
+
+```
+library(blogdown)
+new_site(theme = "nathancday/min_night")
 ```
 
 ## Configuration
@@ -38,29 +44,24 @@ To get started, copy the `config.toml` file inside `exampleSite` to the root of 
 $ cp themes/minimal/exampleSite/config.toml .
 ```
 
-Now edit this file and add your own information. Note that some fields can be ommited.
-
-I recommend you use the theme's archetypes so now delete your site's `archetypes/default.md`.
+This file is the centerpiece for easy theme customizations. Some noteable features are described next.
 
 ## Features
 
-You can tweak the look of the theme to suit your needs in a number of ways:
+- The accent colour can be changed by using the `accent` field in `config.toml`. This is the color that will be used as the background of your site in dark-mode. Dark colors work best.
 
-- The accent colour can be changed by using the `accent` field in `config.toml`.
+- You can also change the background color of the main page by using `backgroundColor`. The navbar and footer are always light and dark in the their respective modes.
 
-- You can also change the background colour by using `backgroundColor`.
+- Add colored 5px borders at the top and bottom of pages by setting `showBorder` to `true`. Even if this is set to `false` the `accent` color will still be used for the main page background in dark-mode.
 
-- Add colored 5px borders at the top and bottom of pages by setting `showBorder` to `true`.
-
-For best results, I recommend you use a dark accent colour with a light background, for example:
-
+Example:
 ```toml
 [params]
     accent = "red"
     showBorder = true
     backgroundColor = "#f5f5f5"
 ```
-You can use hex codes or color names ("red"), I reccomend using hex codes for more specific color assignments.
+You can use either hex codes or color names ("red"), I reccomend using hex codes for more specific color assignments.
 
 ### Fonts
 
@@ -73,21 +74,13 @@ The theme uses [Google Fonts](https://fonts.google.com) to load its font. To cha
 
 ### Syntax highlighting
 
-The theme supports syntax highlighting thanks to [highlight.js](https://highlightjs.org).
+The theme supports syntax highlighting thanks to [highlight.js](https://highlightjs.org). You can change the color sheme via the `highlightStyle` param. Checkout out the options [here](https://highlightjs.org/static/demo/), make sure your main languages render well. For best results with dark-mode, I reccommend choosing a light background style that matches your `accent` color. You control the languages that are highlighted with the `highlightLanguages` param.
 
-It's disabled by default, so you have to enable it by setting `highlight` to `true` in your config.
-
-You can change the style used for the highlighting by using the `highlightStyle` field.
-
-Only the "common" languages will be loaded by default. To load more, use `highlightLanguages`.
-
-A list of all the available styles and languages can be found [here](https://highlightjs.org/static/demo/).
-
-Please note the style and languages should be written in hyphen-separated lowercase, for example:
+The style and languages should be written in hyphen-separated lowercase, for example:
 
 ```toml
 [params]
     highlight = true
     highlightStyle = "solarized-dark"
-    highlightLanguages = ["R"]
+    highlightLanguages = ["r", "go"]
 ```
