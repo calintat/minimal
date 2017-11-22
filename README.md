@@ -1,11 +1,11 @@
 # MinNight
 
-A sleek toggleable night-mode theme for [Hugo](https://gohugo.io). Built on top on the great [Minimal](https://github.com/calintat/minimal) theme. With all of the great Minimal implementations, like custom accent colors, FontAwesome
+A sleek toggleable night-mode theme for [Hugo](https://gohugo.io). Built on top on the great [Minimal](https://github.com/calintat/minimal) theme. Keeps all of the great Minimal stuff, like custom accent color, Google Fonts, FontAwesome menu icons, and layers on:
 
-- A night-mode toggle!!!
+- A night-mode toggle, for eye easy reading
 - A tags/categories list page template from [Xmin](https://github.com/yihui/hugo-xmin)
-- Seperate list templates for posts and projects
-- All tags/categories are links 
+- Updated tag/category labels to hyperlinks back to list of sames
+- Different list templates for posts and projects
 
 A live demo is available [here](https://natedayta.com).
 
@@ -27,7 +27,7 @@ Now you can get updates to Minimal in the future by updating the submodule:
 $ git submodule update --remote themes/min_night
 ```
 
-I use this theme via the `R` pacakge `blogdown`, you can do the same with.
+I use this theme via the `R` pacakge `blogdown`, you can do the same in R.
 
 ```
 library(blogdown)
@@ -74,7 +74,7 @@ The theme uses [Google Fonts](https://fonts.google.com) to load its font. To cha
 
 ### Syntax highlighting
 
-The theme supports syntax highlighting thanks to [highlight.js](https://highlightjs.org). You can change the color sheme via the `highlightStyle` param. Checkout out the options [here](https://highlightjs.org/static/demo/), make sure your main languages render well. For best results with dark-mode, I reccommend choosing a light background style that matches your `accent` color. You control the languages that are highlighted with the `highlightLanguages` param.
+The theme supports syntax highlighting thanks to [highlight.js](https://highlightjs.org). You can change the color scheme via the `highlightStyle` param. Checkout out the options [here](https://highlightjs.org/static/demo/), make sure your main languages render well. For best results with dark-mode, I reccommend choosing a light background style that matches your `accent` color. You control the languages that are highlighted with the `highlightLanguages` param.
 
 The style and languages should be written in hyphen-separated lowercase, for example:
 
