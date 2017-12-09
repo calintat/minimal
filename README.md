@@ -41,7 +41,7 @@ After installation, take a look at the `exampleSite` folder inside `themes/minim
 To get started, copy the `config.toml` file inside `exampleSite` to the root of your Hugo site:
 
 ```
-$ cp themes/minimal/exampleSite/config.toml .
+$ cp themes/min_night/exampleSite/config.toml .
 ```
 
 This file is the centerpiece for easy theme customizations. Some noteable features are described next.
