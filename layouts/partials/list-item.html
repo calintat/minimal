@@ -23,6 +23,7 @@
     <h5>{{ $.Scratch.Get "subtitle" }}</h5>
 
     {{ range.Params.categories }}
+
         <a href="{{"/categories/"|relLangURL }}{{.|urlize}}">
         <kbd class="item-cat"> {{ . }} </kbd>
     </a>

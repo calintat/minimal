@@ -4,7 +4,7 @@ A sleek toggleable night-mode theme for [Hugo](https://gohugo.io). Built on top 
 
 - A night-mode toggle, for eye easy reading
 - A tags/categories list page template from [Xmin](https://github.com/yihui/hugo-xmin)
-- Updated tag/category labels to hyperlinks back to list of sames
+- Updated tag labels to hyperlinks
 - Different list templates for posts and projects
 
 A live demo is available [here](https://natedayta.com).
@@ -84,3 +84,7 @@ The style and languages should be written in hyphen-separated lowercase, for exa
     highlightStyle = "solarized-dark"
     highlightLanguages = ["r", "go"]
 ```
+
+
+
+
