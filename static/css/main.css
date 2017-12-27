@@ -127,6 +127,16 @@ img {
     -webkit-filter: invert(1) hue-rotate(180deg);
     filter: invert(1) hue-rotate(180deg)
 }
+/* "re-flip"" certain elements to keep colors */
+#bigbody.-nightmode img, video {
+    -webkit-filter: invert(1) hue-rotate(-180deg);
+    filter: invert(1) hue-rotate(-180deg)
+}
+#bigbody.-nightmode iframe {
+    -webkit-filter: invert(1) hue-rotate(-180deg);
+    filter: invert(1) hue-rotate(-180deg)
+}
+/* custom behavior for specfic element */
 #bigbody.-nightmode main a {
     color: var(--accent) !important;
 }
