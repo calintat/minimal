@@ -33,19 +33,19 @@ $(document).ready(function(){
   var container = $('#bigbody');
   var stat = $('#button-status');
   
-  container.toggleClass(sessionStorage.toggled);
-  stat.bootstrapToggle(sessionStorage.button).change();
+  container.toggleClass(localStorage.toggled);
+  stat.bootstrapToggle(localStorage.button).change();
   
   
   input.on('click', function() {
-      if (sessionStorage.toggled != "-nightmode" ) {
+      if (localStorage.toggled != "-nightmode" ) {
           container.toggleClass("-nightmode", true );
-          sessionStorage.toggled = "-nightmode";
-          sessionStorage.button = "on";
+          localStorage.toggled = "-nightmode";
+          localStorage.button = "on";
        } else {
           container.toggleClass("-nightmode", false );
-          sessionStorage.toggled = "";
-          sessionStorage.button = "off"
+          localStorage.toggled = "";
+          localStorage.button = "off"
        }
   })
 });
