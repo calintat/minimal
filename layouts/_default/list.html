@@ -4,10 +4,10 @@
     <h2>{{ .Title }}</h2>
 
     {{ range (.Paginator 10).Pages }}
-        {{ if eq "Projects" $.Title }}
-            {{ partial "list-item-project" . }}
+        {{ if eq "Posts" $.Title }}
+           {{partial "list-item-post.html" .}}
         {{else}}
-            {{partial "list-item-post.html" .}}
+            {{ partial "list-item-project" . }}
         {{end}}
     {{end}}
     
