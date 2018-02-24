@@ -13,10 +13,10 @@
 </style>
 
 <!-- main -->
-<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css">
+<link rel="stylesheet" href="{{ "css/main.css" | absURL }}">
 
 <!-- custom -->
-{{ range .Site.Params.css }} <link rel="stylesheet" href="{{ . }}"> {{ end }}
+{{ range .Site.Params.css }} <link rel="stylesheet" href="{{ . | absURL }}"> {{ end }}
 
 <!-- google fonts -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ .Site.Params.font }}">
