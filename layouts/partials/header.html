@@ -5,6 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ .Title }}</title>
+        <link rel="icon" href="{{ .Site.Params.favicon | absURL }}">
         {{ partial "css" . }} {{ partial "js" . }} {{ .Hugo.Generator }}
         {{ if .RSSLink }}
         <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
