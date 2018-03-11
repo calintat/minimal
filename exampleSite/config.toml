@@ -7,7 +7,7 @@ googleAnalytics = ""
 
 [params]
     author = "Calin Tataru"
-    description = "Personal blog theme powered by Hugo"
+    description = "Personal blog theme with night-mode powered by Hugo"
     githubUsername = "#"
     accent = "maroon"
     showBorder = true
