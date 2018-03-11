@@ -1,26 +1,21 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "Min_Night"
-description = "A sleek dark-mode toggle-able Hugo theme"
-theme = "min_night"
-disqusShortname = ""
+title = "Minimal"
+theme = "minimal"
+disqusShortname = "username" # delete this to disable disqus comments
 googleAnalytics = ""
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "public/"]
-
-[permalinks]
-    post = "/:year/:month/:day/:slug/"
 
 [params]
-    author = ""
-    description = "A sleek dark-mode toggle-able Hugo theme"
-    githubUsername = "nathancday"
-    accent = "maroon" # dark colors do best
+    author = "Calin Tataru"
+    description = "Personal blog theme powered by Hugo"
+    githubUsername = "#"
+    accent = "maroon"
     showBorder = true
     backgroundColor = "#f5f5f5"
     font = "Raleway" # should match the name on Google Fonts!
     highlight = true
-    highlightStyle = "atelier-heath-light" # make this match accent
-    highlightLanguages = ["r", "go"]
+    highlightStyle = "atelier-heath-light" # make this complement accent color!
+    highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift", "r"]
 
 # adjust these as you see fit
 [[menu.main]]
@@ -48,26 +43,26 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "public/"]
 # The list of available icons can be found at http://fontawesome.io/icons/
 
 [[menu.icon]]
-    url = "mailto:nathancday@gmail.com"
+    url = "mailto:me@example.com"
     name = "envelope-o"
     weight = 1
 
 [[menu.icon]]
-    url = "https://github.com/NathanCDay"
+    url = "https://github.com/username/"
     name = "github"
     weight = 2
 
 [[menu.icon]]
-    url = "https://twitter.com/offallday/"
+    url = "https://twitter.com/username/"
     name = "twitter"
     weight = 3
 
 [[menu.icon]]
-    url = "https://www.linkedin.com/in/nathan-day-59b48435/"
+    url = "https://www.linkedin.com/in/username/"
     name = "linkedin"
     weight = 4
 
 [[menu.icon]]
-    url = "https://www.stackoverflow.com/users/5878751/nate"
+    url = "https://www.stackoverflow.com/username/"
     name = "stack-overflow"
     weight = 5
