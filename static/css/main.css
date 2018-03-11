@@ -29,13 +29,11 @@ main {
 }
 
 .intro > h1 {
-    color: #212121;
     font-size: 12vh;
 }
 
 .intro > h2 {
-    color: #757575;
-    font-size: 3vmin;
+    font-size: 4vh;
 }
 
 .intro > .profile {
@@ -49,12 +47,16 @@ main {
 a:link, a:visited {
     color: var(--accent);
 }
+a:link.-nightmode {
+    color = "ebe4d1"
+}
 
 a.icon:hover {
     text-decoration: none;
 }
 
 a:hover {
+    text-decoration: none;
     color: var(--accent) !important;
 }
 
@@ -74,8 +76,20 @@ a:hover {
     padding: 10px 0;
 }
 
+.item-cat {
+    background-color: #757575;
+    margin:1px;
+}
+
 .item-tag {
     background-color: var(--accent);
+    margin:1px;
+}
+
+.terms {
+    margin: 1px;
+    padding: 1px;
+    list-style-type: none;
 }
 
 /*navigation bar icons*/
@@ -86,15 +100,71 @@ a:hover {
 }
 
 /*coloured borders at top and bottom of the page*/
-
 .navbar.navbar-default {
     border-top: var(--border-width) solid var(--accent);
 }
 
+/* custome footer */
 footer {
+    background-color: #f8f8f8;
+    border-top: #e7e7e7 solid;
+    border-top-width: 1px;
+    color:"white";
     border-bottom: var(--border-width) solid var(--accent);
 }
 
 img {
     max-width: 100%;
+}
+
+/** Intvert colors
+ * Wonderful CSS filter trick by Leo Nikkilä
+ * @link https://lnikki.la/articles/night-mode-css-filter/
+ */
+#bigbody.-nightmode {
+    background: var(--accent)!important;
+    color: #333333 !important;
+    -webkit-filter: invert(1) hue-rotate(180deg);
+    filter: invert(1) hue-rotate(180deg)
+}
+/* "re-flip"" certain elements to keep colors */
+#bigbody.-nightmode img, video {
+    -webkit-filter: invert(1) hue-rotate(-180deg);
+    filter: invert(1) hue-rotate(-180deg)
+}
+#bigbody.-nightmode iframe {
+    -webkit-filter: invert(1) hue-rotate(-180deg);
+    filter: invert(1) hue-rotate(-180deg)
+}
+/* custom behavior for specfic element */
+#bigbody.-nightmode main a {
+    color: var(--accent) !important;
+}
+#bigbody.-nightmode .item-tag {
+    background-color: var(--accent) !important;
+    color: #f8f8f8 !important;
+}
+
+/* slider attributes match navbar elements */
+#night-mode-toggle {
+    display: inline-block !important;
+    padding-top:10px;
+    font-size: 125%;
+}
+/* built on-top of Custom Style .ios 
+   from: http://www.bootstraptoggle.com/ */
+.toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20px}
+.toggle.ios .toggle-handle { border-radius: 20px;}
+.toggle.ios .toggle-group {transition: none;-webkit-transition: none;}
+
+.toggle-on {
+    background-color: #757575 !important;
+    color: #f5f5f5 !important;
+}
+.toggle-on:hover {
+    background-color: var(--accent) !important;
+}
+.toggle-off:hover {
+    background-color: var(--accent) !important;
+    color: #f8f8f8 !important;
 }

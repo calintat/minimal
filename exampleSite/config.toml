@@ -1,4 +1,4 @@
-baseURL = "http://example.com/"
+baseURL = "/"
 languageCode = "en-us"
 title = "Minimal"
 theme = "minimal"
@@ -7,16 +7,17 @@ googleAnalytics = ""
 
 [params]
     author = "Calin Tataru"
-    description = "Personal blog theme powered by Hugo"
+    description = "Personal blog theme with night-mode powered by Hugo"
     githubUsername = "#"
-    accent = "red"
+    accent = "maroon"
     showBorder = true
-    backgroundColor = "white"
+    backgroundColor = "#f5f5f5"
     font = "Raleway" # should match the name on Google Fonts!
     highlight = true
-    highlightStyle = "solarized-dark"
-    highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift"]
+    highlightStyle = "atelier-heath-light" # make this complement accent color!
+    highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift", "r"]
 
+# adjust these as you see fit
 [[menu.main]]
     url = "/"
     name = "Home"
@@ -31,6 +32,11 @@ googleAnalytics = ""
     url = "/project/"
     name = "Projects"
     weight = 3
+    
+[[menu.main]]
+    url = "/tags/"
+    name = "Tags"
+    weight = 4
 
 # Social icons to be shown on the right-hand side of the navigation bar
 # The "name" field should match the name of the icon to be used
