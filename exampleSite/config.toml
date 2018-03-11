@@ -1,8 +1,8 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "MinNight"
+title = "Min_Night"
 description = "A sleek dark-mode toggle-able Hugo theme"
-theme = "MinNight"
+theme = "min_night"
 disqusShortname = ""
 googleAnalytics = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "public/"]
