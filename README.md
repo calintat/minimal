@@ -1,13 +1,8 @@
-# MinNight
+# Minimal
 
-A sleek toggleable night-mode theme for [Hugo](https://gohugo.io). Built on top on the great [Minimal](https://github.com/calintat/minimal) theme. Keeps all of the great Minimal stuff, like custom accent color, Google Fonts, FontAwesome menu icons, and layers on:
-
-- A night-mode toggle, for eye easy reading
-- A tags/categories list page template from [Xmin](https://github.com/yihui/hugo-xmin)
-- Updated tag labels to hyperlinks
-- Different list templates for posts and projects
-
-A live demo is available [here](https://natedayta.com).
+-Personal blog theme with night-mode, powered by [Hugo](https://gohugo.io).
+-Quickly customize colors, icons and fonts.
+-A live demo is available [here](https://themes.gohugo.io/theme/minimal/).
 
 ## Installation
 
@@ -16,7 +11,7 @@ You can install the theme either as a clone or submodule.
 I recommend the latter. From the root of your Hugo site, type the following:
 
 ```
-$ git submodule add https://github.com/nathancday/min_night themes/min_night
+$ git submodule add https://github.com/calintat/minimal.git themes/minimal
 $ git submodule init
 $ git submodule update
 ```
@@ -24,27 +19,22 @@ $ git submodule update
 Now you can get updates to Minimal in the future by updating the submodule:
 
 ```
-$ git submodule update --remote themes/min_night
-```
-
-I use this theme via the `R` pacakge `blogdown`, you can do the same in R.
-
-```
-library(blogdown)
-new_site(theme = "nathancday/min_night")
+$ git submodule update --remote themes/minimal
 ```
 
 ## Configuration
 
-After installation, take a look at the `exampleSite` folder inside `themes/minimal2`.
+After installation, take a look at the `exampleSite` folder inside `themes/minimal`.
 
 To get started, copy the `config.toml` file inside `exampleSite` to the root of your Hugo site:
 
 ```
-$ cp themes/min_night/exampleSite/config.toml .
+$ cp themes/minimal/exampleSite/config.toml .
 ```
 
 This file is the centerpiece for easy theme customizations. Some noteable features are described next.
+
+Note: Please delete your site's `archetypes/default.md` inorder for the theme to function properly.
 
 ## Features
 
@@ -57,7 +47,7 @@ This file is the centerpiece for easy theme customizations. Some noteable featur
 Example:
 ```toml
 [params]
-    accent = "red"
+    accent = "maroon"
     showBorder = true
     backgroundColor = "#f5f5f5"
 ```
@@ -82,7 +72,7 @@ The style and languages should be written in hyphen-separated lowercase, for exa
 [params]
     highlight = true
     highlightStyle = "solarized-dark"
-    highlightLanguages = ["r", "go"]
+    highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift"]
 ```
 
 
