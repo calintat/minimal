@@ -1,13 +1,23 @@
 {{ partial "header" . }}
 
 <main>
-
-    <h2>{{ .Title }}</h2>
-
-    {{ range (.Paginator 5).Pages }} {{ partial "list-item" . }} {{ end }}
+    
+    <div>
+      <h2>{{ .Title }}</h2>
+    
+      <ul class="terms">
+          {{ range $key, $value := .Data.Terms }}
+          <li>
+            <a href='{{ (print "/" $.Data.Plural "/" $key) | relURL }}'>
+              {{ $key }}
+            </a>
+            ({{ len $value }})
+          </li>
+          {{ end }}
+        </ul>
+    </div>
 
 </main>
-
-{{ partial "paginator" . }}
+  
 
 {{ partial "footer" . }}

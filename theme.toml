@@ -1,12 +1,12 @@
-name = "Minimal"
+name = "MinNight"
 license = "MIT"
-licenselink = "https://github.com/calintat/minimal/blob/master/LICENSE.md"
-description = "Personal blog theme powered by Hugo"
-homepage = "http://github.com/calintat/minimal/"
-tags = ["blog", "minimal", "personal", "responsive"]
-features = ["responsive"]
+licenselink = "https://github.com/nathancday/min_night/blob/master/LICENSE.md"
+description = "A sleek dark-mode toggle-able Hugo theme"
+homepage = "http://github.com/nathancday/min_night"
+tags = ["minimal", "dark", "light", "link_tags", "bootstrap"]
+features = ["responsive", "night-mode", "dark-mode"]
 min_version = "0.24.1"
 
 [author]
-  name = "Calin Tataru"
-  homepage = "https://calintat.github.io/"
+  name = "Nate Day"
+  homepage = "https://natedayta.com"
