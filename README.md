@@ -31,7 +31,7 @@ To get started, copy the `config.toml` file inside `exampleSite` to the root of 
 $ cp themes/minimal/exampleSite/config.toml .
 ```
 
-Now edit this file and add your own information. Note that some fields can be ommited.
+Now edit this file and add your own information. Note that some fields can be omitted.
 
 I recommend you use the theme's archetypes so now delete your site's `archetypes/default.md`.
 
