@@ -6,9 +6,9 @@
 
         {{ with .Site.Params.profilePic }} <img class="profile" src="{{ . }}"> {{ end }}
 
-        <h1>{{ .Site.Title }}</h1>
+        <h2>{{ .Site.Title }}</h2>
 
-        <h2>{{ markdownify .Site.Params.Description }}</h2>
+        <h3>{{ markdownify .Site.Params.Description }}</h3>
 
     </div>
 
