@@ -30,6 +30,8 @@
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="theme-color" content="#ffffff">
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        {{ template "_internal/opengraph.html" . }}
+        {{ template "_internal/twitter_cards.html" . }}
     </head>
 
     {{ if .Site.Params.MathJax | default true }}
