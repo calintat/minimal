@@ -25,6 +25,7 @@
           gtag('config', '{{ .Site.GoogleAnalytics }}');
         </script>
         {{ end }}
+        {{ partial "head-close" . }}
     </head>
 
     {{ if .Site.Params.MathJax | default true }}
