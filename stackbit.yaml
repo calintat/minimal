@@ -122,6 +122,9 @@ models:
         label: Tags
         items:
           type: string
+      - type: boolean
+        name: draft
+        label: Draft
   project:
     type: page
     label: Project page
