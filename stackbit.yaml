@@ -67,10 +67,11 @@ models:
           - type: string
             name: highlightStyle
             label: Highlight Style
-          - type: enum
+          - type: list
             name: highlightLanguages
             label: Highlight Languages
-            options: ["go", "haskell", "kotlin", "scala", "swift"]
+            items: 
+              type: string
       - type: object
         name: menu
         label: Menu
@@ -105,4 +106,44 @@ models:
                 - type: number
                   name: weight
                   label: Icon Order Weight
-
+  post:
+    type: page
+    label: Blog post
+    folder: post
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: date
+        name: date
+        label: Date
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+  project:
+    type: page
+    label: Project page
+    folder: project
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: description
+        label: Description
+      - type: string
+        name: repo
+        label: Repo
+      - type: list
+        name: tags
+        label: Tags
+        items: 
+          type: string
+      - type: number
+        name: weight
+        label: Page Order Weight
+      - type: boolean
+        name: draft
+        label: Draft
