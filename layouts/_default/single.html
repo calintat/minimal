@@ -2,7 +2,16 @@
 
 <main>
 
-    {{ partial "list-item" . }}
+    {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") | $.Scratch.Set "subtitle" }}
+    {{ with .Description }} {{ $.Scratch.Set "subtitle" . }} {{ end }}
+
+    <div class="item">
+        <h2>{{ .Title }}</h2>
+        <h5>{{ $.Scratch.Get "subtitle" }}</h5>
+        {{ range .Params.tags }}
+        <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}"><kbd class="item-tag">{{ . }}</kbd></a>
+        {{ end }}
+    </div>
 
     <br> <div class="text-justify">{{ .Content }}</div>
 
