@@ -2,12 +2,13 @@
 
 <main>
 
-    <h2>{{ .Title }}</h2>
+    <div class="item">
+        <h2>{{ .Title }}</h2>
+    </div>
 
     {{ range (.Paginator 5).Pages }} {{ partial "list-item" . }} {{ end }}
 
 </main>
 
 {{ partial "paginator" . }}
-
 {{ partial "footer" . }}

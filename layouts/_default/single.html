@@ -2,38 +2,14 @@
 
 <main>
 
-    {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") | $.Scratch.Set "subtitle" }}
-    {{ with .Description }} {{ $.Scratch.Set "subtitle" . }} {{ end }}
-
     <div class="item">
         <h2>{{ .Title }}</h2>
-        <h5>{{ $.Scratch.Get "subtitle" }}</h5>
-        {{ range .Params.tags }}
-        <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}"><kbd class="item-tag">{{ . }}</kbd></a>
-        {{ end }}
+        <h5>{{ .Description }}</h5>
+        {{ partial "tags" . }}
     </div>
 
     <br> <div class="text-justify">{{ .Content }}</div>
 
-    <!-- related posts with the same tags -->
-    {{ $related := first 3 (where (where (where .Site.Pages.ByDate.Reverse ".Type" "==" "post") ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
-
-    {{ if $related }}
-
-        <h4 class="page-header">Related</h4>
-
-        {{ range $related }} {{ partial "list-item" . }} {{ end }}
-
-    {{ end }}
-
-    {{ if and .Site.DisqusShortname (not .Params.disableComments) }}
-
-        <h4 class="page-header">Comments</h4>
-
-        {{ template "_internal/disqus.html" . }}
-
-    {{ end }}
-
 </main>
 
-{{ partial "footer.html" . }}
+{{ partial "footer" . }}
