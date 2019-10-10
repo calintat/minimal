@@ -21,40 +21,33 @@
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments)};
           gtag('js', new Date());
-
           gtag('config', '{{ .Site.GoogleAnalytics }}');
         </script>
         {{ end }}
         {{ partial "head-close" . }}
     </head>
 
-    {{ if .Site.Params.MathJax | default true }}
-    <!-- adds MathJax support -->
-    <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>
-    {{ end }}
+        {{ if .Site.Params.MathJax | default true }}
+        <!-- adds MathJax support -->
+        <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+        {{ end }}
+    </head>
 
     <body>
         {{ partial "body-open" . }}
         <nav class="navbar navbar-default navbar-fixed-top">
-
             <div class="container">
-
                 <div class="navbar-header">
-
                     <a class="navbar-brand visible-xs" href="#">{{ .Title }}</a>
-
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-
                 </div>
-
                 <div class="collapse navbar-collapse">
-
                     {{ if .Site.Menus.main }}
                         <ul class="nav navbar-nav">
                             {{ range sort .Site.Menus.main }}
@@ -62,7 +55,6 @@
                             {{ end }}
                         </ul>
                     {{ end }}
-
                     {{ if .Site.Menus.icon }}
                         <ul class="nav navbar-nav navbar-right">
                             {{ range sort .Site.Menus.icon }}
@@ -70,9 +62,6 @@
                             {{ end }}
                         </ul>
                     {{ end }}
-
                 </div>
-
             </div>
-
         </nav>
