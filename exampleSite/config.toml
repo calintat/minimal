@@ -14,7 +14,7 @@ googleAnalytics = ""
     backgroundColor = "white"
     font = "Raleway" # should match the name on Google Fonts!
     highlight = true
-    highlightStyle = "solarized-dark"
+    highlightStyle = "default"
     highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift"]
 
 [[menu.main]]
