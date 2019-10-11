@@ -16,13 +16,17 @@ main {
     max-width: 750px;
 }
 
-/*footer*/
+img {
+    max-width: 100%;
+}
+
+/* Footer */
 
 .copyright {
     margin: 15px 0;
 }
 
-/*home page*/
+/* Home page */
 
 .intro {
     transform: translateY(22vh);
@@ -44,7 +48,7 @@ main {
     border-radius: 50%;
 }
 
-/*apply accent colour to links*/
+/* Apply accent colour to links */
 
 a:link, a:visited {
     color: var(--accent);
@@ -58,7 +62,7 @@ a:hover {
     color: var(--accent) !important;
 }
 
-/*paginator at bottom of list view*/
+/* Paginator at bottom of list view */
 
 .pages {
     padding: 15px 0;
@@ -68,7 +72,7 @@ a:hover {
     padding: 0 15px;
 }
 
-/*list item for posts and projects*/
+/* List item for posts and projects */
 
 .item {
     padding: 10px 0;
@@ -78,14 +82,14 @@ a:hover {
     background-color: var(--accent);
 }
 
-/*navigation bar icons*/
+/* Navigation bar icons */
 
 .navbar-icon {
     font-size: 125%;
     display: inline-block !important;
 }
 
-/*coloured borders at top and bottom of the page*/
+/* Coloured borders at top and bottom of the page */
 
 .navbar.navbar-default {
     border-top: var(--border-width) solid var(--accent);
@@ -93,8 +97,4 @@ a:hover {
 
 footer {
     border-bottom: var(--border-width) solid var(--accent);
-}
-
-img {
-    max-width: 100%;
 }

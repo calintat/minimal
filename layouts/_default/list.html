@@ -2,11 +2,9 @@
 
 <main>
 
-    <div class="item">
-        <h2>{{ .Title }}</h2>
-    </div>
+    <h2>{{ .Title }}</h2>
 
-    {{ range (.Paginator 5).Pages }} {{ partial "list-item" . }} {{ end }}
+    {{ range (.Paginator 4).Pages }} {{ partial "list-item" . }} {{ end }}
 
 </main>
 
