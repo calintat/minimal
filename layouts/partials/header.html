@@ -50,11 +50,11 @@
                             {{ if .HasChildren }}
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">{{ .Name }}<span class="caret"></span></a>
-                                    <div class ="dropdown-menu">
+                                    <ul class ="dropdown-menu">
                                         {{ range .Children }}
-                                        <a href="{{ .URL }}">{{ .Name }}</a>
+                                        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
                                         {{ end }}
-                                    </div>
+                                    </ul>
                                 </li>
 
                             {{ else }}
