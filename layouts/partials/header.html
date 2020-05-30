@@ -5,45 +5,62 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ .Title }}</title>
-        {{ if .Site.Params.favicon }}
-            <link rel="icon" href="{{ .Site.Params.favicon | absURL }}">
-        {{ end }}
-        {{ partial "css" . }} {{ partial "js" . }} {{ hugo.Generator }}
-        {{ with .OutputFormats.Get "RSS" }}
-            <link href="{{ .RelPermalink }}" rel="alternate" type="{{ .MediaType.Type }}" title="{{ $.Site.Title }}" />
-            <link href="{{ .RelPermalink }}" rel="feed" type="{{ .MediaType.Type }}" title="{{ $.Site.Title }}" />
+        {{ partial "css" . }} {{ partial "js" . }} {{ .Hugo.Generator }}
+        {{ if .RSSLink }}
+        <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+        <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
         {{ end }}
 
         {{ if .Site.GoogleAnalytics }}
-            <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
-            <script>
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments)};
-              gtag('js', new Date());
-              gtag('config', '{{ .Site.GoogleAnalytics }}');
-            </script>
-        {{ end }}
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
 
-        {{ if .Site.Params.MathJax | default true }}
-            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+          gtag('config', '{{ .Site.GoogleAnalytics }}');
+        </script>
         {{ end }}
-
-        {{ partial "head-close" . }}
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="theme-color" content="#ffffff">
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        {{ template "_internal/opengraph.html" . }}
+        {{ template "_internal/twitter_cards.html" . }}
     </head>
+
+    {{ if .Site.Params.MathJax | default true }}
+    <!-- adds MathJax support -->
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    {{ end }}
 
     <body>
         {{ partial "body-open" . }}
         <nav class="navbar navbar-default navbar-fixed-top">
+
             <div class="container">
+
                 <div class="navbar-header">
+
                     <a class="navbar-brand visible-xs" href="#">{{ .Title }}</a>
+
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+
                 </div>
+
                 <div class="collapse navbar-collapse">
+
                     {{ if .Site.Menus.main }}
                         <ul class="nav navbar-nav">
                             {{ range sort .Site.Menus.main }}
@@ -51,6 +68,7 @@
                             {{ end }}
                         </ul>
                     {{ end }}
+
                     {{ if .Site.Menus.icon }}
                         <ul class="nav navbar-nav navbar-right">
                             {{ range sort .Site.Menus.icon }}
@@ -58,6 +76,9 @@
                             {{ end }}
                         </ul>
                     {{ end }}
+
                 </div>
+
             </div>
+
         </nav>

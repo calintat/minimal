@@ -1,12 +1,50 @@
 {{ partial "header" . }}
 
 <main>
+
     <div class="intro">
+
+    	<style type="text/css">
+			body {
+			  /* Location of the image */
+			  background-image: url(/profile-large-1440p.jpg);
+			  
+			  /* Image is centered vertically and horizontally at all times */
+			  background-position: center center;
+			  
+			  /* Image doesn't repeat */
+			  background-repeat: no-repeat;
+			  
+			  /* Makes the image fixed in the viewport so that it doesn't move when 
+			     the content height is greater than the image height */
+			  background-attachment: fixed;
+			  
+			  /* This is what makes the background image rescale based on its container's size */
+			  background-size: cover;
+			  
+			  /* Pick a solid background color that will be displayed while the background image is loading */
+			  background-color:#DCDCDC;
+			  
+			}
+
+			/* For mobile devices */
+			@media only screen and (max-width: 767px) {
+			  body {
+			    /* The file size of this background image is 93% smaller
+			     * to improve page load speed on mobile internet connections */
+			    background-image: url(/profile-mobile-767p.jpg);
+			  }
+			}
+    	</style>
+
         {{ with .Site.Params.profilePic }} <img class="profile" src="{{ . }}"> {{ end }}
-        <h1>{{ .Site.Title }}</h1>
-        <h2>{{ markdownify .Site.Params.Description }}</h2>
-        {{ with .Content }} <div class="homepage-content text-justify">{{ . }}</div> {{ end }}
+
+        <h2 style="color:#DCDCDC; text-shadow: 1px 1px #000000;">{{ .Site.Title }}</h2>
+
+        <h3 style="color:#DCDCDC; text-shadow: 1px 1px #000000;">{{ markdownify .Site.Params.Description }}</h3>
+
     </div>
+
 </main>
 
 {{ partial "footer" . }}
