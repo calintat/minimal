@@ -43,25 +43,25 @@ googleAnalytics = ""
 
 [[menu.icon]]
     url = "mailto:me@example.com"
-    name = "envelope-o"
+    name = "fas fa-envelope"
     weight = 1
 
 [[menu.icon]]
     url = "https://github.com/username/"
-    name = "github"
+    name = "fab fa-github"
     weight = 2
 
 [[menu.icon]]
     url = "https://twitter.com/username/"
-    name = "twitter"
+    name = "fab fa-twitter"
     weight = 3
 
 [[menu.icon]]
     url = "https://www.linkedin.com/in/username/"
-    name = "linkedin"
+    name = "fab fa-linkedin"
     weight = 4
 
 [[menu.icon]]
     url = "https://www.stackoverflow.com/username/"
-    name = "stack-overflow"
+    name = "fab fa-stack-overflow"
     weight = 5
