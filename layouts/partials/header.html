@@ -47,7 +47,19 @@
                     {{ if .Site.Menus.main }}
                         <ul class="nav navbar-nav">
                             {{ range sort .Site.Menus.main }}
+                            {{ if .HasChildren }}
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">{{ .Name }}<span class="caret"></span></a>
+                                    <ul class ="dropdown-menu">
+                                        {{ range .Children }}
+                                        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                                        {{ end }}
+                                    </ul>
+                                </li>
+
+                            {{ else }}
                                 <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                            {{ end }}
                             {{ end }}
                         </ul>
                     {{ end }}
