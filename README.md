@@ -1,7 +1,7 @@
 # Minimal
 
 Personal blog theme powered by [Hugo](https://gohugo.io).
-A live demo is available [here](https://themes.gohugo.io/theme/minimal/).
+A live demo is available [here](http://web.archive.org/web/20210115210950/https://themes.gohugo.io/theme/minimal/).
 
 ## Installation
 
