@@ -33,37 +33,31 @@
 
     <body>
         {{ partial "body-open" . }}
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-          <div class="navbar-brand">
-            <a class="navbar-item" href="#">{{ .Title }}</a>
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-            </a>
-          </div>
-          <div id="navbar" class="navbar-menu">
-          {{ if .Site.Menus.main }}
-            <div class="navbar-start">
-              {{ range sort .Site.Menus.main }}
-                <a class="navbar-item" href="{{ .URL }}">{{ .Name }}</a>
-              {{ end }}
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">{{ .Title }}</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    {{ if .Site.Menus.main }}
+                        <ul class="nav navbar-nav">
+                            {{ range sort .Site.Menus.main }}
+                                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                            {{ end }}
+                        </ul>
+                    {{ end }}
+                    {{ if .Site.Menus.icon }}
+                        <ul class="nav navbar-nav navbar-right">
+                            {{ range sort .Site.Menus.icon }}
+                                <li class="navbar-icon"><a href="{{ .URL }}"><i class="{{ .Name }}"></i></a></li>
+                            {{ end }}
+                        </ul>
+                    {{ end }}
+                </div>
             </div>
-          {{ end }}
-          </div>
-          <div class="navbar-end">
-            <div class="navbar-item">
-            {{ if .Site.Menus.icon }}
-              <div class="buttons">
-                {{ range sort .Site.Menus.icon }}
-                  <a class="button" href="{{ .URL }}">
-                    <span class="icon">
-                      <i class="{{ .Name }}" aria-hidden="true"></i>
-                    </span>
-                  </a>
-                {{ end }}
-              </div>
-            {{ end }}
-            </div>
-          </div>
         </nav>
