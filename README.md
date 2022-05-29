@@ -54,6 +54,17 @@ For best results, I recommend you use a dark accent colour with a light backgrou
     backgroundColor = "white"
 ```
 
+### [Add hugo contact form](https://fabform.io/a/hugo-contact-form)
+ 
+  ```
+ <form action="https://fabform.io/f/{form-id}" method="post">
+  <label for="email">Your Email</label>
+  <input name="email" type="email">
+  <button type="submit">Submit</button> 
+ </form>
+```
+
+
 ### Fonts
 
 The theme uses [Google Fonts](https://fonts.google.com) to load its font. To change the font:
