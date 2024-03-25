@@ -8,6 +8,12 @@
         {{ if .Site.Params.favicon }}
             <link rel="icon" href="{{ .Site.Params.favicon | absURL }}">
         {{ end }}
+        <link rel="canonical" href="{{ .Permalink | absURL }}
+        {{- if ne .Paginator nil -}}
+          {{- if .Paginator.HasPrev -}}
+            page/{{ .Paginator.PageNumber }}
+          {{- end -}}
+        {{- end }}" />
         {{ partial "css" . }} {{ partial "js" . }} {{ hugo.Generator }}
         {{ with .OutputFormats.Get "RSS" }}
             <link href="{{ .RelPermalink }}" rel="alternate" type="{{ .MediaType.Type }}" title="{{ $.Site.Title }}" />
